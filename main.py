@@ -122,7 +122,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
     # 星期几
     week = week_list[today.weekday()]
     # 开学的第几周
-    # weeks = get_Today_Week()
+    weeks = 1
     # 获取在一起的日子的日期格式
     love_year = int(config.love_date.split("-")[0])
     love_month = int(config.love_date.split("-")[1])
