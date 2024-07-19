@@ -71,8 +71,7 @@ def get_Today_Week():
 
 
 # 获取今日课程
-def get_Today_Class():
-    pass
+# def get_Today_Class():
 #     year = localtime().tm_year
 #     month = localtime().tm_mon
 #     day = localtime().tm_mday
@@ -146,7 +145,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         birth_date = year_date
         birth_day = str(birth_date.__sub__(today)).split(" ")[0]
 
-    theClass = get_Today_Class()
+    #theClass = get_Today_Class()
     theuser = to_user[0]
     data = {
         "touser": theuser,
@@ -184,30 +183,6 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             },
             "birthday": {
                 "value": birth_day,
-                "color": "#FF8000"
-            },
-            "firstClass": {
-                "value": theClass[0],
-                "color": "#FF8000"
-            },
-            "secondClass": {
-                "value": theClass[1],
-                "color": "#FF8000"
-            },
-            "thirdClass": {
-                "value": theClass[2],
-                "color": "#FF8000"
-            },
-            "fourthClass": {
-                "value": theClass[3],
-                "color": "#FF8000"
-            },
-            "fifthClass": {
-                "value": theClass[4],
-                "color": "#FF8000"
-            },
-            "sixthClass": {
-                "value": theClass[5],
                 "color": "#FF8000"
             }
         }
@@ -352,7 +327,7 @@ if __name__ == '__main__':
         send_message(user, accessToken, city, weather, max_temperature, min_temperature)
         isPost = True
     # 课程提醒推送
-    todayClasses = get_Today_Class()
+    # todayClasses = get_Today_Class()
     # time_table = config.time_table
     # for i in range(len(time_table)):
     #     if isPost:
@@ -362,8 +337,8 @@ if __name__ == '__main__':
     #         nowTime = datetime.now().strftime('%H:%M:%S')
     #         print("当前时间:", nowTime)
     #         if reminderTime == nowTime:
-    #             if len(todayClasses[i]) != 0:
-    #                 classInfo = "课程信息: " + todayClasses[i] + "\n" + "上课时间: " + config.course_Time[i] + "\n"
+    #             if len([i]) != 0:
+    #                 classInfo = "课程信息: " + [i] + "\n" + "上课时间: " + config.course_Time[i] + "\n"
     #                 print(classInfo)
     #                 send_Class_Message(user, accessToken, classInfo)
     #                 print("课程信息推送成功！")
