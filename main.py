@@ -71,7 +71,8 @@ def get_Today_Week():
 
 
 # 获取今日课程
-# def get_Today_Class():
+def get_Today_Class():
+    pass
 #     year = localtime().tm_year
 #     month = localtime().tm_mon
 #     day = localtime().tm_mday
@@ -351,7 +352,7 @@ if __name__ == '__main__':
         send_message(user, accessToken, city, weather, max_temperature, min_temperature)
         isPost = True
     # 课程提醒推送
-    # todayClasses = get_Today_Class()
+    todayClasses = get_Today_Class()
     # time_table = config.time_table
     # for i in range(len(time_table)):
     #     if isPost:
